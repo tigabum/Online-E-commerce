@@ -107,7 +107,7 @@ const categoryList = ()=>{
 const List = (params)=>{
     const query = querystring.stringify(params)
     console.log("query", query)
-    return fetch('/api/products/?'+query.anchor,{
+    return fetch('/api/products/?'+query,{
         method:'GET'
     }).then((response)=>response.json())
     .catch(err=>console.log(err))
